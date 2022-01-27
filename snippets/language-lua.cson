@@ -1,0 +1,493 @@
+'.source.lua':
+	'game.path':
+		'prefix': 'game.path'
+		'body': 'game.path'
+	'game.fullscreen':
+		'prefix': 'game.fullscreen'
+		'body': 'game.fullscreen'
+	'game.debug_stack':
+        'body': 'game.debug_stack()'
+        'prefix': 'game.debug_stack'
+    'game.exit':
+        'body': 'game.exit()'
+        'prefix': 'game.exit'
+    'game.set_fullscreen':
+        'body': 'game.set_fullscreen(${0:false})'
+        'prefix': 'game.set_fullscreen'
+    'game.on':
+        'body': 'game.on("${0:event}", function()\n\t--code goes here\nend)'
+        'prefix': 'game.on'
+	'game.set_scene':
+        'body': 'game.set_scene(${0:scene})'
+        'prefix': 'game.set_scene'
+	'game.trigger':
+        'body': 'game.trigger("${0:event}")'
+        'prefix': 'game.trigger'
+	'game.trigger_with':
+        'body': 'game.trigger_with("${0:event}", ${1:data})'
+        'prefix': 'game.trigger_with'
+	'assets.load_audio':
+        'body': 'assets.load_audio("${0:file}")'
+        'prefix': 'assets.load_audio'
+	'assets.load_shader':
+        'body': 'assets.load_shader("${0:vert_file}", "${1:frag_file}")'
+        'prefix': 'assets.load_shader'
+	'assets.load_texture':
+        'body': 'assets.load_texture("${0:file}")'
+        'prefix': 'assets.load_texture'
+	'assets.load_spritemap':
+        'body': 'assets.load_spritemap("${0:file}")'
+        'prefix': 'assets.load_spritemap'
+	'assets.load_tilemap':
+        'body': 'assets.load_tilemap("${0:file}")'
+        'prefix': 'assets.load_tilemap'
+	'renderer.clear':
+        'body': 'renderer.clear()'
+        'prefix': 'renderer.clear'
+	'renderer.begin':
+        'body': 'renderer.begin()'
+        'prefix': 'renderer.begin'
+	'renderer.present':
+        'body': 'renderer.present()'
+        'prefix': 'renderer.present'
+	'renderer.draw_sprite':
+        'body': 'renderer.draw_sprite(${0:sprite})'
+        'prefix': 'renderer.draw_sprite'
+	'renderer.draw_rect':
+        'body': 'renderer.draw_sprite(${0:color${1:0${2:0${3:100${4:100})'
+        'prefix': 'renderer.draw_sprite'
+	'renderer.draw_tilemap_layer':
+        'body': 'renderer.draw_tilemap_layer(${0:layer})'
+        'prefix': 'renderer.draw_tilemap_layer'
+	'renderer.draw_text':
+        'body': 'renderer.draw_text(${0:font}, "${1:text}" ,${2:0}, ${3:0}, ${4:100})'
+        'prefix': 'renderer.draw_text'
+    'renderer.set_blend':
+        'body': 'renderer.set_blend(${0:true})'
+        'prefix': 'renderer.set_blend'
+    'renderer.set_blend_func':
+        'body': 'renderer.set_blend_func(${0:sfactor ${1:dfactor})'
+        'prefix': 'renderer.set_blend_func'
+    'renderer.set_clear_color':
+        'body': 'renderer.set_clear_color(${0:color})'
+        'prefix': 'renderer.set_clear_color'
+    'renderer.set_origin':
+        'body': 'renderer.set_origin(${0:0.0 ${1:0.0})'
+        'prefix': 'renderer.set_origin'
+    'renderer.set_rotation':
+        'body': 'renderer.set_rotation(${0:0.0})'
+        'prefix': 'renderer.set_rotation'
+    'renderer.set_scale':
+        'body': 'renderer.set_scale(${0:1.0 ${1:1.0})'
+        'prefix': 'renderer.set_scale'
+    'renderer.set_position':
+        'body': 'renderer.set_position(${0:0.0 ${1:0.0})'
+        'prefix': 'renderer.set_position'
+    'renderer.set_shader':
+        'body': 'renderer.set_shader(${0:shader})'
+        'prefix': 'renderer.set_shader'
+    'audio.is_playing':
+        'body': 'audio.is_playing(${0:sound})'
+        'prefix': 'audio.is_playing'
+    'audio.play':
+        'body': 'audio.play(${0:sound})'
+        'prefix': 'audio.is_playing'
+    'audio.set_volume':
+        'body': 'audio.set_volume(${0:sound ${1:1.0})'
+        'prefix': 'audio.set_volume'
+    'audio.stop':
+        'body': 'audio.stop(${0:sound})'
+        'prefix': 'audio.stop'
+    'keyboard.key_clicked':
+        'body': 'keyboard.key_clicked(${0:key})'
+        'prefix': 'keyboard.key_clicked'
+    'keyboard.key_down':
+        'body': 'keyboard.key_down(${0:key})'
+        'prefix': 'keyboard.key_down'
+    'mouse.mouse_x':
+        'body': 'mouse.mouse_x'
+        'prefix': 'mouse.mouse_x'
+    'mouse.mouse_y':
+        'body': 'mouse.mouse_y'
+        'prefix': 'mouse.mouse_y'
+    'mouse.button_down':
+        'body': 'mouse.button_down(${0:key})'
+        'prefix': 'mouse.key_down'
+    'viewport.width':
+        'body': 'viewport.width'
+        'prefix': 'viewport.width'
+    'viewport.height':
+        'body': 'viewport.height'
+        'prefix': 'viewport.height'
+    'config.get_string':
+        'body': 'config.get_string("${0:general.name}")'
+        'prefix': 'config.get_string'
+    'config.get_integer':
+        'body': 'config.get_integer("${0:general.name}")'
+        'prefix': 'config.get_integer'
+	'KB_SPACE':
+		'body': 'KB_SPACE'
+		'prefix': 'KB_SPACE'
+	'KB_APOSTROPHE':
+		'body': 'KB_APOSTROPHE'
+		'prefix': 'KB_APOSTROPHE'
+	'KB_COMMA':
+		'body': 'KB_COMMA'
+		'prefix': 'KB_COMMA'
+	'KB_MINUS':
+		'body': 'KB_MINUS'
+		'prefix': 'KB_MINUS'
+	'KB_PERIOD':
+		'body': 'KB_PERIOD'
+		'prefix': 'KB_PERIOD'
+	'KB_SLASH':
+		'body': 'KB_SLASH'
+		'prefix': 'KB_SLASH'
+	'KB_0':
+		'body': 'KB_0'
+		'prefix': 'KB_0'
+	'KB_1':
+		'body': 'KB_1'
+		'prefix': 'KB_1'
+	'KB_2':
+		'body': 'KB_2'
+		'prefix': 'KB_2'
+	'KB_3':
+		'body': 'KB_3'
+		'prefix': 'KB_3'
+	'KB_4':
+		'body': 'KB_4'
+		'prefix': 'KB_4'
+	'KB_5':
+		'body': 'KB_5'
+		'prefix': 'KB_5'
+	'KB_6':
+		'body': 'KB_6'
+		'prefix': 'KB_6'
+	'KB_7':
+		'body': 'KB_7'
+		'prefix': 'KB_7'
+	'KB_8':
+		'body': 'KB_8'
+		'prefix': 'KB_8'
+	'KB_9':
+		'body': 'KB_9'
+		'prefix': 'KB_9'
+	'KB_SEMICOLON':
+		'body': 'KB_SEMICOLON'
+		'prefix': 'KB_SEMICOLON'
+	'KB_EQUAL':
+		'body': 'KB_EQUAL'
+		'prefix': 'KB_EQUAL'
+	'KB_A':
+		'body': 'KB_A'
+		'prefix': 'KB_A'
+	'KB_B':
+		'body': 'KB_B'
+		'prefix': 'KB_B'
+	'KB_C':
+		'body': 'KB_C'
+		'prefix': 'KB_C'
+	'KB_D':
+		'body': 'KB_D'
+		'prefix': 'KB_D'
+	'KB_E':
+		'body': 'KB_E'
+		'prefix': 'KB_E'
+	'KB_F':
+		'body': 'KB_F'
+		'prefix': 'KB_F'
+	'KB_G':
+		'body': 'KB_G'
+		'prefix': 'KB_G'
+	'KB_H':
+		'body': 'KB_H'
+		'prefix': 'KB_H'
+	'KB_I':
+		'body': 'KB_I'
+		'prefix': 'KB_I'
+	'KB_J':
+		'body': 'KB_J'
+		'prefix': 'KB_J'
+	'KB_K':
+		'body': 'KB_K'
+		'prefix': 'KB_K'
+	'KB_L':
+		'body': 'KB_L'
+		'prefix': 'KB_L'
+	'KB_M':
+		'body': 'KB_M'
+		'prefix': 'KB_M'
+	'KB_N':
+		'body': 'KB_N'
+		'prefix': 'KB_N'
+	'KB_O':
+		'body': 'KB_O'
+		'prefix': 'KB_O'
+	'KB_P':
+		'body': 'KB_P'
+		'prefix': 'KB_P'
+	'KB_Q':
+		'body': 'KB_Q'
+		'prefix': 'KB_Q'
+	'KB_R':
+		'body': 'KB_R'
+		'prefix': 'KB_R'
+	'KB_S':
+		'body': 'KB_S'
+		'prefix': 'KB_S'
+	'KB_T':
+		'body': 'KB_T'
+		'prefix': 'KB_T'
+	'KB_U':
+		'body': 'KB_U'
+		'prefix': 'KB_U'
+	'KB_V':
+		'body': 'KB_V'
+		'prefix': 'KB_V'
+	'KB_W':
+		'body': 'KB_W'
+		'prefix': 'KB_W'
+	'KB_X':
+		'body': 'KB_X'
+		'prefix': 'KB_X'
+	'KB_Y':
+		'body': 'KB_Y'
+		'prefix': 'KB_Y'
+	'KB_Z':
+		'body': 'KB_Z'
+		'prefix': 'KB_Z'
+	'KB_LEFT_BRACKET':
+		'body': 'KB_LEFT_BRACKET'
+		'prefix': 'KB_LEFT_BRACKET'
+	'KB_BACKSLASH':
+		'body': 'KB_BACKSLASH'
+		'prefix': 'KB_BACKSLASH'
+	'KB_RIGHT_BRACKET':
+		'body': 'KB_RIGHT_BRACKET'
+		'prefix': 'KB_RIGHT_BRACKET'
+	'KB_GRAVE_ACCENT':
+		'body': 'KB_GRAVE_ACCENT'
+		'prefix': 'KB_GRAVE_ACCENT'
+	'KB_WORLD_1':
+		'body': 'KB_WORLD_1'
+		'prefix': 'KB_WORLD_1'
+	'KB_WORLD_2':
+		'body': 'KB_WORLD_2'
+		'prefix': 'KB_WORLD_2'
+	'KB_ESCAPE':
+		'body': 'KB_ESCAPE'
+		'prefix': 'KB_ESCAPE'
+	'KB_ENTER':
+		'body': 'KB_ENTER'
+		'prefix': 'KB_ENTER'
+	'KB_TAB':
+		'body': 'KB_TAB'
+		'prefix': 'KB_TAB'
+	'KB_BACKSPACE':
+		'body': 'KB_BACKSPACE'
+		'prefix': 'KB_BACKSPACE'
+	'KB_INSERT':
+		'body': 'KB_INSERT'
+		'prefix': 'KB_INSERT'
+	'KB_DELETE':
+		'body': 'KB_DELETE'
+		'prefix': 'KB_DELETE'
+	'KB_RIGHT':
+		'body': 'KB_RIGHT'
+		'prefix': 'KB_RIGHT'
+	'KB_LEFT':
+		'body': 'KB_LEFT'
+		'prefix': 'KB_LEFT'
+	'KB_DOWN':
+		'body': 'KB_DOWN'
+		'prefix': 'KB_DOWN'
+	'KB_UP':
+		'body': 'KB_UP'
+		'prefix': 'KB_UP'
+	'KB_PAGE_UP':
+		'body': 'KB_PAGE_UP'
+		'prefix': 'KB_PAGE_UP'
+	'KB_PAGE_DOWN':
+		'body': 'KB_PAGE_DOWN'
+		'prefix': 'KB_PAGE_DOWN'
+	'KB_HOME':
+		'body': 'KB_HOME'
+		'prefix': 'KB_HOME'
+	'KB_END':
+		'body': 'KB_END'
+		'prefix': 'KB_END'
+	'KB_CAPS_LOCK':
+		'body': 'KB_CAPS_LOCK'
+		'prefix': 'KB_CAPS_LOCK'
+	'KB_SCROLL_LOCK':
+		'body': 'KB_SCROLL_LOCK'
+		'prefix': 'KB_SCROLL_LOCK'
+	'KB_NUM_LOCK':
+		'body': 'KB_NUM_LOCK'
+		'prefix': 'KB_NUM_LOCK'
+	'KB_PRINT_SCREEN':
+		'body': 'KB_PRINT_SCREEN'
+		'prefix': 'KB_PRINT_SCREEN'
+	'KB_PAUSE':
+		'body': 'KB_PAUSE'
+		'prefix': 'KB_PAUSE'
+	'KB_F1':
+		'body': 'KB_F1'
+		'prefix': 'KB_F1'
+	'KB_F2':
+		'body': 'KB_F2'
+		'prefix': 'KB_F2'
+	'KB_F3':
+		'body': 'KB_F3'
+		'prefix': 'KB_F3'
+	'KB_F4':
+		'body': 'KB_F4'
+		'prefix': 'KB_F4'
+	'KB_F5':
+		'body': 'KB_F5'
+		'prefix': 'KB_F5'
+	'KB_F6':
+		'body': 'KB_F6'
+		'prefix': 'KB_F6'
+	'KB_F7':
+		'body': 'KB_F7'
+		'prefix': 'KB_F7'
+	'KB_F8':
+		'body': 'KB_F8'
+		'prefix': 'KB_F8'
+	'KB_F9':
+		'body': 'KB_F9'
+		'prefix': 'KB_F9'
+	'KB_F10':
+		'body': 'KB_F10'
+		'prefix': 'KB_F10'
+	'KB_F11':
+		'body': 'KB_F11'
+		'prefix': 'KB_F11'
+	'KB_F12':
+		'body': 'KB_F12'
+		'prefix': 'KB_F12'
+	'KB_F13':
+		'body': 'KB_F13'
+		'prefix': 'KB_F13'
+	'KB_F14':
+		'body': 'KB_F14'
+		'prefix': 'KB_F14'
+	'KB_F15':
+		'body': 'KB_F15'
+		'prefix': 'KB_F15'
+	'KB_F16':
+		'body': 'KB_F16'
+		'prefix': 'KB_F16'
+	'KB_F17':
+		'body': 'KB_F17'
+		'prefix': 'KB_F17'
+	'KB_F18':
+		'body': 'KB_F18'
+		'prefix': 'KB_F18'
+	'KB_F19':
+		'body': 'KB_F19'
+		'prefix': 'KB_F19'
+	'KB_F20':
+		'body': 'KB_F20'
+		'prefix': 'KB_F20'
+	'KB_F21':
+		'body': 'KB_F21'
+		'prefix': 'KB_F21'
+	'KB_F22':
+		'body': 'KB_F22'
+		'prefix': 'KB_F22'
+	'KB_F23':
+		'body': 'KB_F23'
+		'prefix': 'KB_F23'
+	'KB_F24':
+		'body': 'KB_F24'
+		'prefix': 'KB_F24'
+	'KB_F25':
+		'body': 'KB_F25'
+		'prefix': 'KB_F25'
+	'KB_KP_0':
+		'body': 'KB_KP_0'
+		'prefix': 'KB_KP_0'
+	'KB_KP_1':
+		'body': 'KB_KP_1'
+		'prefix': 'KB_KP_1'
+	'KB_KP_2':
+		'body': 'KB_KP_2'
+		'prefix': 'KB_KP_2'
+	'KB_KP_3':
+		'body': 'KB_KP_3'
+		'prefix': 'KB_KP_3'
+	'KB_KP_4':
+		'body': 'KB_KP_4'
+		'prefix': 'KB_KP_4'
+	'KB_KP_5':
+		'body': 'KB_KP_5'
+		'prefix': 'KB_KP_5'
+	'KB_KP_6':
+		'body': 'KB_KP_6'
+		'prefix': 'KB_KP_6'
+	'KB_KP_7':
+		'body': 'KB_KP_7'
+		'prefix': 'KB_KP_7'
+	'KB_KP_8':
+		'body': 'KB_KP_8'
+		'prefix': 'KB_KP_8'
+	'KB_KP_9':
+		'body': 'KB_KP_9'
+		'prefix': 'KB_KP_9'
+	'KB_KP_DECIMAL':
+		'body': 'KB_KP_DECIMAL'
+		'prefix': 'KB_KP_DECIMAL'
+	'KB_KP_DIVIDE':
+		'body': 'KB_KP_DIVIDE'
+		'prefix': 'KB_KP_DIVIDE'
+	'KB_KP_MULTIPLY':
+		'body': 'KB_KP_MULTIPLY'
+		'prefix': 'KB_KP_MULTIPLY'
+	'KB_KP_SUBTRACT':
+		'body': 'KB_KP_SUBTRACT'
+		'prefix': 'KB_KP_SUBTRACT'
+	'KB_KP_ADD':
+		'body': 'KB_KP_ADD'
+		'prefix': 'KB_KP_ADD'
+	'KB_KP_ENTER':
+		'body': 'KB_KP_ENTER'
+		'prefix': 'KB_KP_ENTER'
+	'KB_KP_EQUAL':
+		'body': 'KB_KP_EQUAL'
+		'prefix': 'KB_KP_EQUAL'
+	'KB_LEFT_SHIFT':
+		'body': 'KB_LEFT_SHIFT'
+		'prefix': 'KB_LEFT_SHIFT'
+	'KB_LEFT_CONTROL':
+		'body': 'KB_LEFT_CONTROL'
+		'prefix': 'KB_LEFT_CONTROL'
+	'KB_LEFT_ALT':
+		'body': 'KB_LEFT_ALT'
+		'prefix': 'KB_LEFT_ALT'
+	'KB_LEFT_SUPER':
+		'body': 'KB_LEFT_SUPER'
+		'prefix': 'KB_LEFT_SUPER'
+	'KB_RIGHT_SHIFT':
+		'body': 'KB_RIGHT_SHIFT'
+		'prefix': 'KB_RIGHT_SHIFT'
+	'KB_RIGHT_CONTROL':
+		'body': 'KB_RIGHT_CONTROL'
+		'prefix': 'KB_RIGHT_CONTROL'
+	'KB_RIGHT_ALT':
+		'body': 'KB_RIGHT_ALT'
+		'prefix': 'KB_RIGHT_ALT'
+	'KB_RIGHT_SUPER':
+		'body': 'KB_RIGHT_SUPER'
+		'prefix': 'KB_RIGHT_SUPER'
+	'KB_MENU':
+		'body': 'KB_MENU'
+		'prefix': 'KB_MENU'
+	'MOUSE_LEFT':
+		'body': 'MOUSE_LEFT'
+		'prefix': 'MOUSE_LEFT'
+	'MOUSE_RIGHT':
+		'body': 'MOUSE_RIGHT'
+		'prefix': 'MOUSE_RIGHT'

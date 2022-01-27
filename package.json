@@ -1,0 +1,15 @@
+{
+ 	"author": "Kodaloid <contact@kodaloid.com>",
+	"bundleDependencies": false,
+	"dependencies": {},
+	"deprecated": false,
+	"description": "Add syntax highlighting and snippets to Lua files in Atom",
+	"engines": {
+		"atom": ">=0.50.0"
+	},
+	"license": "MIT",
+	"name": "xentu-lua-snippets-atom",
+	"private": false,
+	"repository": "https://github.com/xentu/xentu-lua-snippets-atom",
+	"version": "0.0.1"
+}
