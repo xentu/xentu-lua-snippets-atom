@@ -1,5 +1,5 @@
 {
- 	"author": "Kodaloid <info@kodaloid.com>",
+	"author": "Kodaloid <info@kodaloid.com>",
 	"bundleDependencies": false,
 	"dependencies": {},
 	"deprecated": false,
@@ -11,5 +11,5 @@
 	"name": "xentu-lua-snippets-atom",
 	"private": false,
 	"repository": "https://github.com/xentu/xentu-lua-snippets-atom",
-	"version": "0.0.0"
+	"version": "0.1.0"
 }
